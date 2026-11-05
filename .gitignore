@@ -1,0 +1,38 @@
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environments and credentials
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Operating-system and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Private/raw and generated scientific data (publish curated summaries separately)
+data/
+prepared/
+benchmark_catalogues/
+outputs/
+logs/
+results/
+.matplotlib/
+
+# Large raw scientific files and logs wherever they occur
+*.h5
+*.hdf5
+*.hdf
+*.npz
+*.log
