@@ -1,0 +1,5 @@
+# Developer/test environment for the Galaxy spatial analytics project.
+# Includes the pinned original requirements (currently including pytest).
+-r requirements.txt
+
+# Add new development-only dependencies after reviewing tests/.
