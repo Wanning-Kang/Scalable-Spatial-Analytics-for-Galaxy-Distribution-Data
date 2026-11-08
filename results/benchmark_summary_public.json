@@ -1,0 +1,469 @@
+{
+  "provenance": "selected aggregate values from historical 2026-10-21 benchmark outputs, not new reruns",
+  "timing_scope": "DD+DR+RR total, cKDTree includes both tree builds, excludes imports, input reading, sample allocation",
+  "repeat_count": 3,
+  "data_random_catalogue_ratio": "N_R=N_D for these benchmarks; distinct from science N_R=5N_D",
+  "bins": "12 radial bins over [0.05,5] cMpc/h; periodic 75 cMpc/h box; same input for compared methods",
+  "memory_scope": "whole Python worker peak RSS, not incremental algorithm memory",
+  "brute_limits": {
+    "blocked_max_n": 5000,
+    "dense_max_n": 1000,
+    "no_brute_100k_comparison": true
+  },
+  "experiments": [
+    {
+      "case": "snapshot_099",
+      "catalog_size": 21052,
+      "input_kind": "TNG100-1 main selected galaxy-hosting subhalo catalogue",
+      "metrics": [
+        {
+          "n": 500,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01119062,
+          "peak_whole_worker_rss_MiB_median": 100.3438
+        },
+        {
+          "n": 500,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.00285896,
+          "peak_whole_worker_rss_MiB_median": 79.8438
+        },
+        {
+          "n": 500,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01369375,
+          "peak_whole_worker_rss_MiB_median": 94.375
+        },
+        {
+          "n": 1000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.03167379,
+          "peak_whole_worker_rss_MiB_median": 105.4531
+        },
+        {
+          "n": 1000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.005054,
+          "peak_whole_worker_rss_MiB_median": 79.7969
+        },
+        {
+          "n": 1000,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.06004063,
+          "peak_whole_worker_rss_MiB_median": 152.9062
+        },
+        {
+          "n": 5000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.59486446,
+          "peak_whole_worker_rss_MiB_median": 105.3906
+        },
+        {
+          "n": 5000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.023861,
+          "peak_whole_worker_rss_MiB_median": 79.7188
+        },
+        {
+          "n": 10000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.05816579,
+          "peak_whole_worker_rss_MiB_median": 79.7812
+        }
+      ],
+      "speedups": [
+        {
+          "n": 500,
+          "blocked_over_ckdtree_speedup": 3.9142
+        },
+        {
+          "n": 1000,
+          "blocked_over_ckdtree_speedup": 6.2671
+        },
+        {
+          "n": 5000,
+          "blocked_over_ckdtree_speedup": 24.9304
+        }
+      ],
+      "brute_force_reference_verified_where_overlapping": true,
+      "actual_worker_failures": 0,
+      "skipped_cases_are_not_validated": true
+    },
+    {
+      "case": "snapshot_067",
+      "catalog_size": 19621,
+      "input_kind": "TNG100-1 main selected galaxy-hosting subhalo catalogue",
+      "metrics": [
+        {
+          "n": 500,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01082438,
+          "peak_whole_worker_rss_MiB_median": 103.9062
+        },
+        {
+          "n": 500,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.00274917,
+          "peak_whole_worker_rss_MiB_median": 79.6094
+        },
+        {
+          "n": 500,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01376462,
+          "peak_whole_worker_rss_MiB_median": 98.25
+        },
+        {
+          "n": 1000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.0317175,
+          "peak_whole_worker_rss_MiB_median": 105.375
+        },
+        {
+          "n": 1000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.00506929,
+          "peak_whole_worker_rss_MiB_median": 79.6719
+        },
+        {
+          "n": 1000,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.05624617,
+          "peak_whole_worker_rss_MiB_median": 153.5625
+        },
+        {
+          "n": 5000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.59597308,
+          "peak_whole_worker_rss_MiB_median": 105.1562
+        },
+        {
+          "n": 5000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.023529,
+          "peak_whole_worker_rss_MiB_median": 79.6094
+        },
+        {
+          "n": 10000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.05763713,
+          "peak_whole_worker_rss_MiB_median": 79.625
+        }
+      ],
+      "speedups": [
+        {
+          "n": 500,
+          "blocked_over_ckdtree_speedup": 3.9373
+        },
+        {
+          "n": 1000,
+          "blocked_over_ckdtree_speedup": 6.2568
+        },
+        {
+          "n": 5000,
+          "blocked_over_ckdtree_speedup": 25.3293
+        }
+      ],
+      "brute_force_reference_verified_where_overlapping": true,
+      "actual_worker_failures": 0,
+      "skipped_cases_are_not_validated": true
+    },
+    {
+      "case": "snapshot_050",
+      "catalog_size": 17836,
+      "input_kind": "TNG100-1 main selected galaxy-hosting subhalo catalogue",
+      "metrics": [
+        {
+          "n": 500,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01085371,
+          "peak_whole_worker_rss_MiB_median": 103.7969
+        },
+        {
+          "n": 500,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.00278937,
+          "peak_whole_worker_rss_MiB_median": 79.3281
+        },
+        {
+          "n": 500,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01418625,
+          "peak_whole_worker_rss_MiB_median": 98.25
+        },
+        {
+          "n": 1000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.03201538,
+          "peak_whole_worker_rss_MiB_median": 105.2812
+        },
+        {
+          "n": 1000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.00510183,
+          "peak_whole_worker_rss_MiB_median": 79.5
+        },
+        {
+          "n": 1000,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.056111,
+          "peak_whole_worker_rss_MiB_median": 153.5469
+        },
+        {
+          "n": 5000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.59340687,
+          "peak_whole_worker_rss_MiB_median": 105.3438
+        },
+        {
+          "n": 5000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.02373571,
+          "peak_whole_worker_rss_MiB_median": 79.5156
+        },
+        {
+          "n": 10000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.05745421,
+          "peak_whole_worker_rss_MiB_median": 79.6875
+        }
+      ],
+      "speedups": [
+        {
+          "n": 500,
+          "blocked_over_ckdtree_speedup": 3.8911
+        },
+        {
+          "n": 1000,
+          "blocked_over_ckdtree_speedup": 6.2753
+        },
+        {
+          "n": 5000,
+          "blocked_over_ckdtree_speedup": 25.0006
+        }
+      ],
+      "brute_force_reference_verified_where_overlapping": true,
+      "actual_worker_failures": 0,
+      "skipped_cases_are_not_validated": true
+    },
+    {
+      "case": "snapshot_033",
+      "catalog_size": 12281,
+      "input_kind": "TNG100-1 main selected galaxy-hosting subhalo catalogue",
+      "metrics": [
+        {
+          "n": 500,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01074842,
+          "peak_whole_worker_rss_MiB_median": 100.0
+        },
+        {
+          "n": 500,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.002809,
+          "peak_whole_worker_rss_MiB_median": 78.4688
+        },
+        {
+          "n": 500,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01360833,
+          "peak_whole_worker_rss_MiB_median": 94.4219
+        },
+        {
+          "n": 1000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.03171696,
+          "peak_whole_worker_rss_MiB_median": 105.1406
+        },
+        {
+          "n": 1000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.00501608,
+          "peak_whole_worker_rss_MiB_median": 78.4375
+        },
+        {
+          "n": 1000,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.05543746,
+          "peak_whole_worker_rss_MiB_median": 151.9375
+        },
+        {
+          "n": 5000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.59334713,
+          "peak_whole_worker_rss_MiB_median": 105.1562
+        },
+        {
+          "n": 5000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.023591,
+          "peak_whole_worker_rss_MiB_median": 78.5156
+        },
+        {
+          "n": 10000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.05743829,
+          "peak_whole_worker_rss_MiB_median": 79.25
+        }
+      ],
+      "speedups": [
+        {
+          "n": 500,
+          "blocked_over_ckdtree_speedup": 3.8264
+        },
+        {
+          "n": 1000,
+          "blocked_over_ckdtree_speedup": 6.3231
+        },
+        {
+          "n": 5000,
+          "blocked_over_ckdtree_speedup": 25.1514
+        }
+      ],
+      "brute_force_reference_verified_where_overlapping": true,
+      "actual_worker_failures": 0,
+      "skipped_cases_are_not_validated": true
+    },
+    {
+      "case": "engineering_100k",
+      "catalog_size": 100000,
+      "input_kind": "broader-eligibility REAL TNG Snapshot 99 engineering catalogue sampled without replacement from 106434 candidates",
+      "metrics": [
+        {
+          "n": 500,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01058938,
+          "peak_whole_worker_rss_MiB_median": 105.0
+        },
+        {
+          "n": 500,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.00273217,
+          "peak_whole_worker_rss_MiB_median": 87.0625
+        },
+        {
+          "n": 500,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.01337679,
+          "peak_whole_worker_rss_MiB_median": 99.25
+        },
+        {
+          "n": 1000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.03168783,
+          "peak_whole_worker_rss_MiB_median": 110.0469
+        },
+        {
+          "n": 1000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.00497625,
+          "peak_whole_worker_rss_MiB_median": 87.1406
+        },
+        {
+          "n": 1000,
+          "method": "dense_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.05617321,
+          "peak_whole_worker_rss_MiB_median": 159.4688
+        },
+        {
+          "n": 5000,
+          "method": "blocked_brute",
+          "repeat_count": 3,
+          "total_seconds_median": 0.59261767,
+          "peak_whole_worker_rss_MiB_median": 110.1719
+        },
+        {
+          "n": 5000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.02360013,
+          "peak_whole_worker_rss_MiB_median": 86.9375
+        },
+        {
+          "n": 10000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.05776717,
+          "peak_whole_worker_rss_MiB_median": 86.8906
+        },
+        {
+          "n": 50000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 0.55055375,
+          "peak_whole_worker_rss_MiB_median": 89.0625
+        },
+        {
+          "n": 100000,
+          "method": "ckdtree",
+          "repeat_count": 3,
+          "total_seconds_median": 1.52629242,
+          "peak_whole_worker_rss_MiB_median": 96.7344
+        }
+      ],
+      "speedups": [
+        {
+          "n": 500,
+          "blocked_over_ckdtree_speedup": 3.8758
+        },
+        {
+          "n": 1000,
+          "blocked_over_ckdtree_speedup": 6.3678
+        },
+        {
+          "n": 5000,
+          "blocked_over_ckdtree_speedup": 25.1108
+        }
+      ],
+      "brute_force_reference_verified_where_overlapping": true,
+      "actual_worker_failures": 0,
+      "skipped_cases_are_not_validated": true
+    }
+  ],
+  "limitations": [
+    "No speedup is calculated for N=100000, where no brute-force comparison was performed.",
+    "The 100K engineering sample is real TNG but has broader eligibility than the main science sample.",
+    "Results are hardware/implementation/workload-specific; only three repeats per point."
+  ]
+}

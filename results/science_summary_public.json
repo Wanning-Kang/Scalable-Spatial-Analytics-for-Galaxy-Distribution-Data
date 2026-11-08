@@ -1,0 +1,151 @@
+{
+  "data_source": "IllustrisTNG TNG100-1; saved 2026-10-21 experiment",
+  "analysis_kind": "descriptive galaxy-hosting subhalos (not observed survey galaxies)",
+  "selection": {
+    "subhalo_flag": 1,
+    "stellar_mass_min_msun": 1000000000,
+    "min_stellar_particles": 100,
+    "periodic_box_side_cMpc_h": 75
+  },
+  "definitions": {
+    "small_scale": "unweighted mean of three bins fully contained in [0.2,1.0] cMpc/h (actually approx. [0.232,0.734])",
+    "internal_jackknife": "3x3x3=27 spatial regions; not independent cosmic variance",
+    "power_law_fit": "rough covariance-aware description; fitted bins fully within [0.2,3.0] cMpc/h; imperfect fit in all snapshots"
+  },
+  "snapshots": [
+    {
+      "snapshot": 99,
+      "redshift": 0.0,
+      "selected_objects": 21052,
+      "small_scale_correlation": {
+        "mean_xi": 141.81107351,
+        "internal_jackknife_se": 12.92770066
+      },
+      "power_law_fit": {
+        "converged": true,
+        "r0_cMpc_h": 4.41443947,
+        "gamma": 1.96824269,
+        "reduced_chi_square": 4.86522109
+      },
+      "hdbscan_groups": 103,
+      "hdbscan_noise_fraction": 0.57695231
+    },
+    {
+      "snapshot": 67,
+      "redshift": 0.503048,
+      "selected_objects": 19621,
+      "small_scale_correlation": {
+        "mean_xi": 87.41098883,
+        "internal_jackknife_se": 6.90048939
+      },
+      "power_law_fit": {
+        "converged": true,
+        "r0_cMpc_h": 3.6050721,
+        "gamma": 1.9406323,
+        "reduced_chi_square": 2.90450185
+      },
+      "hdbscan_groups": 91,
+      "hdbscan_noise_fraction": 0.60404668
+    },
+    {
+      "snapshot": 50,
+      "redshift": 0.997294,
+      "selected_objects": 17836,
+      "small_scale_correlation": {
+        "mean_xi": 64.74026637,
+        "internal_jackknife_se": 5.68102739
+      },
+      "power_law_fit": {
+        "converged": true,
+        "r0_cMpc_h": 3.35329437,
+        "gamma": 1.86506431,
+        "reduced_chi_square": 5.46978347
+      },
+      "hdbscan_groups": 75,
+      "hdbscan_noise_fraction": 0.62261718
+    },
+    {
+      "snapshot": 33,
+      "redshift": 2.002028,
+      "selected_objects": 12281,
+      "small_scale_correlation": {
+        "mean_xi": 45.81501003,
+        "internal_jackknife_se": 4.34084599
+      },
+      "power_law_fit": {
+        "converged": true,
+        "r0_cMpc_h": 3.35692933,
+        "gamma": 1.67900598,
+        "reduced_chi_square": 3.07604152
+      },
+      "hdbscan_groups": 57,
+      "hdbscan_noise_fraction": 0.59229704
+    }
+  ],
+  "coarse_stellar_mass_matching": {
+    "n_per_snapshot": 12281,
+    "edges_log10_Msun": [
+      9.0,
+      9.5,
+      10.0,
+      10.5,
+      11.0,
+      11.5,
+      12.0,
+      14.0
+    ],
+    "matched_counts_per_bin": [
+      5839,
+      3404,
+      1994,
+      883,
+      151,
+      10,
+      0
+    ],
+    "snapshots": [
+      {
+        "snapshot": 99,
+        "selected_objects": 12281,
+        "small_scale_correlation": {
+          "mean_xi": 135.7606986,
+          "internal_jackknife_se": 14.7518369
+        },
+        "power_law_r0_cMpc_h": 4.26165782
+      },
+      {
+        "snapshot": 67,
+        "selected_objects": 12281,
+        "small_scale_correlation": {
+          "mean_xi": 84.44486861,
+          "internal_jackknife_se": 8.01809298
+        },
+        "power_law_r0_cMpc_h": 3.32772356
+      },
+      {
+        "snapshot": 50,
+        "selected_objects": 12281,
+        "small_scale_correlation": {
+          "mean_xi": 60.76874681,
+          "internal_jackknife_se": 5.19289629
+        },
+        "power_law_r0_cMpc_h": 3.32758471
+      },
+      {
+        "snapshot": 33,
+        "selected_objects": 12281,
+        "small_scale_correlation": {
+          "mean_xi": 45.81501003,
+          "internal_jackknife_se": 4.34084599
+        },
+        "power_law_r0_cMpc_h": 3.35692933
+      }
+    ],
+    "limitations": "coarse-bin mass matching does not match within-bin masses or prove sample completeness"
+  },
+  "interpretation_limits": [
+    "Four snapshots share one simulation volume and initial conditions.",
+    "Density-conditioned contrasts and deletion experiments are descriptive, not causal.",
+    "Full high-dimensional covariance arrays and raw point data are intentionally excluded from this public summary."
+  ]
+}

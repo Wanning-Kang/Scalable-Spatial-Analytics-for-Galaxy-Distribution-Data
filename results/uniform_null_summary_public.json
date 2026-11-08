@@ -1,0 +1,87 @@
+{
+  "provenance": "additional post-hoc uniformly random controls, saved in 2026-10 experiment review",
+  "design": {
+    "repeats_per_snapshot": 20,
+    "base_seed": 20261021,
+    "seed_rule": "SeedSequence([20261021,snapshot,repeat,2026]) with two spawned streams for D and R",
+    "n_random": "5*N",
+    "selection": "all twenty outcomes retained; no early stopping or selected favorable seed",
+    "original_control_preserved": true
+  },
+  "snapshots": [
+    {
+      "snapshot": 99,
+      "n": 21052,
+      "mean_small_scale_xi": 0.03033233,
+      "between_realisation_sd": 0.03649838,
+      "negative_mean_count": 4,
+      "original_single_control_mean": 0.07911653,
+      "original_control_deviation_in_ensemble_sd": 1.33661282,
+      "minimum_over_twenty": -0.05468718,
+      "maximum_over_twenty": 0.08147736
+    },
+    {
+      "snapshot": 67,
+      "n": 19621,
+      "mean_small_scale_xi": 0.01114404,
+      "between_realisation_sd": 0.06514261,
+      "negative_mean_count": 10,
+      "original_single_control_mean": -0.10296551,
+      "original_control_deviation_in_ensemble_sd": -1.75168847,
+      "minimum_over_twenty": -0.08615193,
+      "maximum_over_twenty": 0.14240122
+    },
+    {
+      "snapshot": 50,
+      "n": 17836,
+      "mean_small_scale_xi": 0.00298839,
+      "between_realisation_sd": 0.08139702,
+      "negative_mean_count": 11,
+      "original_single_control_mean": 0.0423621,
+      "original_control_deviation_in_ensemble_sd": 0.48372424,
+      "minimum_over_twenty": -0.15394146,
+      "maximum_over_twenty": 0.19426237
+    },
+    {
+      "snapshot": 33,
+      "n": 12281,
+      "mean_small_scale_xi": -0.03503717,
+      "between_realisation_sd": 0.07601807,
+      "negative_mean_count": 13,
+      "original_single_control_mean": -0.3220038,
+      "original_control_deviation_in_ensemble_sd": -3.77497917,
+      "minimum_over_twenty": -0.24594906,
+      "maximum_over_twenty": 0.04912435
+    }
+  ],
+  "snapshot_033_pair_count_check": {
+    "bins": [
+      4,
+      5,
+      6
+    ],
+    "method": "query_pairs/sparse edge enumeration followed by explicit minimum-image Euclidean norms",
+    "saved_and_independently_enumerated_counts_equal": true,
+    "DD": [
+      14,
+      48,
+      173
+    ],
+    "DR": [
+      203,
+      646,
+      2147
+    ],
+    "RR": [
+      484,
+      1552,
+      4991
+    ]
+  },
+  "limitations": [
+    "Twenty additional repetitions do not calibrate an extreme-tail probability.",
+    "The original Snapshot 033 negative control remains unresolved rather than being replaced.",
+    "The internal jackknife error model is not independently validated by matching DD/DR/RR counts.",
+    "These are Monte Carlo realizations, not independent cosmic volumes."
+  ]
+}
